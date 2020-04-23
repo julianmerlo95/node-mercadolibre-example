@@ -1,8 +1,11 @@
-const axios = require('axios');
+const axios = require('../axios/axios');
 
 module.exports = async (req, res) => {
   try {
-    const response = await axios.get('https://api.mercadolibre.com/sites/MLA/search?q=samsung');
+    const categorie = req.params.categorie
+    console.log(req);
+
+    const response = await axios.get(categorie);
     res.json({
       data: response.data.results
     })

@@ -7,7 +7,7 @@ const routes = express.Router();
 routes.use(express.json());
 
 // Routes
-routes.get('/', showUrl);
+routes.get('/:categorie', showUrl);
 
 
 module.exports = routes;
