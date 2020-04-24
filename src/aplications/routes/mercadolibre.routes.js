@@ -9,5 +9,4 @@ routes.use(express.json());
 // Routes
 routes.get('/:categorie', showUrl);
 
-
 module.exports = routes;
